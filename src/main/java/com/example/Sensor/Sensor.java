@@ -2,7 +2,7 @@ package com.example.Sensor;
 
 import java.util.UUID;
 
-public class Sensor {
+public abstract class Sensor {
   UUID id;
   String name;
 
