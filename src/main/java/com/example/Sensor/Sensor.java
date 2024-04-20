@@ -2,8 +2,9 @@ package com.example.Sensor;
 
 import java.util.UUID;
 
-public abstract class Sensor {
-  UUID id;
+import com.example.System.Element;
+
+public abstract class Sensor extends Element {
   String name;
 
   double cost;
@@ -16,14 +17,11 @@ public abstract class Sensor {
   double gain;
 
   public Sensor(String name, double cost, double precision, double phase, double gain) {
-    this.name = name;
+    super(name);
     this.cost = cost;
     this.precision = precision;
     this.phase = phase;
     this.gain = gain;
-
-    this.id = UUID.randomUUID();
-    System.out.println("my id is: " + id);
   }
 
   public void setInput(double input) {
